@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_app/common/app_thems.dart';
+import 'package:islamy_app/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-     
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
-   
+      theme: AppThems.theme,
+   home: HomeScreen(),
     );
   }
 }
