@@ -18,6 +18,10 @@ class $AssetsImagesGen {
   AssetGenImage get appBarImage =>
       const AssetGenImage('assets/images/app_bar_image.png');
 
+  /// File path: assets/images/card_image.png
+  AssetGenImage get cardImage =>
+      const AssetGenImage('assets/images/card_image.png');
+
   /// File path: assets/images/fifth_image_intro_screen.png
   AssetGenImage get fifthImageIntroScreen =>
       const AssetGenImage('assets/images/fifth_image_intro_screen.png');
@@ -30,11 +34,22 @@ class $AssetsImagesGen {
   AssetGenImage get fourthImageIntroScreen =>
       const AssetGenImage('assets/images/fourth_image_intro_screen.png');
 
+  /// File path: assets/images/hadeeth_bg.png
+  AssetGenImage get hadeethBg =>
+      const AssetGenImage('assets/images/hadeeth_bg.png');
+
   /// File path: assets/images/hadeeth_icon.svg
   String get hadeethIcon => 'assets/images/hadeeth_icon.svg';
 
   /// File path: assets/images/quran_icon.svg
   String get quranIcon => 'assets/images/quran_icon.svg';
+
+  /// File path: assets/images/quran_star.svg
+  String get quranStar => 'assets/images/quran_star.svg';
+
+  /// File path: assets/images/quran_tab_bg.png
+  AssetGenImage get quranTabBg =>
+      const AssetGenImage('assets/images/quran_tab_bg.png');
 
   /// File path: assets/images/radio_icon.svg
   String get radioIcon => 'assets/images/radio_icon.svg';
@@ -60,11 +75,15 @@ class $AssetsImagesGen {
   /// List of all assets
   List<dynamic> get values => [
     appBarImage,
+    cardImage,
     fifthImageIntroScreen,
     firstImageIntroScreen,
     fourthImageIntroScreen,
+    hadeethBg,
     hadeethIcon,
     quranIcon,
+    quranStar,
+    quranTabBg,
     radioIcon,
     sebhaIcon,
     secImageIntroScreen,
