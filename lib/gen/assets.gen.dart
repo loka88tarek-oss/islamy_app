@@ -45,6 +45,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/hadeeth_icon.svg
   String get hadeethIcon => 'assets/images/hadeeth_icon.svg';
 
+  /// File path: assets/images/head_of_sebha.png
+  AssetGenImage get headOfSebha =>
+      const AssetGenImage('assets/images/head_of_sebha.png');
+
   /// File path: assets/images/quran_icon.svg
   String get quranIcon => 'assets/images/quran_icon.svg';
 
@@ -57,6 +61,10 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/radio_icon.svg
   String get radioIcon => 'assets/images/radio_icon.svg';
+
+  /// File path: assets/images/sebha_body.png
+  AssetGenImage get sebhaBody =>
+      const AssetGenImage('assets/images/sebha_body.png');
 
   /// File path: assets/images/sebha_icon.svg
   String get sebhaIcon => 'assets/images/sebha_icon.svg';
@@ -90,10 +98,12 @@ class $AssetsImagesGen {
     hadeethBg,
     hadeethCardBg,
     hadeethIcon,
+    headOfSebha,
     quranIcon,
     quranStar,
     quranTabBg,
     radioIcon,
+    sebhaBody,
     sebhaIcon,
     sebhaTabBg,
     secImageIntroScreen,
