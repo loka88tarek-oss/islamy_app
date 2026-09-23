@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:islamy_app/common/app_colors.dart';
+import 'package:islamy_app/common/app_colors.dart'; 
 import 'package:islamy_app/gen/assets.gen.dart';
 import 'package:islamy_app/tabs/times_tab/time_sections/azkar_section.dart';
 import 'package:islamy_app/widgets/bg_build_widget.dart';
