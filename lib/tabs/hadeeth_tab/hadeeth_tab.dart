@@ -38,6 +38,7 @@ class HadeethTab extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 10.0),
                             child: Stack(
+                              
                               fit: StackFit.expand,
                               children: [
                                 Image(

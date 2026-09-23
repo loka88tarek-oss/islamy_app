@@ -43,23 +43,23 @@ class _HomeScreenState extends State<HomeScreen> {
 
         items: [
           _buildBottomNavigationBar(
-            icon: (Assets.images.quranIcon),
+            icon: (Assets.icons.quranIcon),
             label: "Quran",
           ),
           _buildBottomNavigationBar(
-            icon: (Assets.images.hadeethIcon),
+            icon: (Assets.icons.hadeethIcon),
             label: "Hadeeth",
           ),
           _buildBottomNavigationBar(
-            icon: (Assets.images.sebhaIcon),
+            icon: (Assets.icons.sebhaIcon),
             label: "Sebha",
           ),
           _buildBottomNavigationBar(
-            icon: (Assets.images.radioIcon),
+            icon: (Assets.icons.radioIcon),
             label: "Radio",
           ),
           _buildBottomNavigationBar(
-            icon: (Assets.images.timeIcon),
+            icon: (Assets.icons.timeIcon),
             label: "Time",
           ),
         ],

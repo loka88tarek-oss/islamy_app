@@ -11,6 +11,58 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/hadeeth_icon.svg
+  String get hadeethIcon => 'assets/icons/hadeeth_icon.svg';
+
+  /// File path: assets/icons/no_sound_icon.svg
+  String get noSoundIcon => 'assets/icons/no_sound_icon.svg';
+
+  /// File path: assets/icons/pause.svg
+  String get pause => 'assets/icons/pause.svg';
+
+  /// File path: assets/icons/play_on.svg
+  String get playOn => 'assets/icons/play_on.svg';
+
+  /// File path: assets/icons/quran_icon.svg
+  String get quranIcon => 'assets/icons/quran_icon.svg';
+
+  /// File path: assets/icons/quran_star.svg
+  String get quranStar => 'assets/icons/quran_star.svg';
+
+  /// File path: assets/icons/radio_icon.svg
+  String get radioIcon => 'assets/icons/radio_icon.svg';
+
+  /// File path: assets/icons/sebha_icon.svg
+  String get sebhaIcon => 'assets/icons/sebha_icon.svg';
+
+  /// File path: assets/icons/sound_off.svg
+  String get soundOff => 'assets/icons/sound_off.svg';
+
+  /// File path: assets/icons/sound_on_icon.svg
+  String get soundOnIcon => 'assets/icons/sound_on_icon.svg';
+
+  /// File path: assets/icons/time_icon.svg
+  String get timeIcon => 'assets/icons/time_icon.svg';
+
+  /// List of all assets
+  List<String> get values => [
+    hadeethIcon,
+    noSoundIcon,
+    pause,
+    playOn,
+    quranIcon,
+    quranStar,
+    radioIcon,
+    sebhaIcon,
+    soundOff,
+    soundOnIcon,
+    timeIcon,
+  ];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -21,6 +73,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/card_image.png
   AssetGenImage get cardImage =>
       const AssetGenImage('assets/images/card_image.png');
+
+  /// File path: assets/images/evening_azkar.png
+  AssetGenImage get eveningAzkar =>
+      const AssetGenImage('assets/images/evening_azkar.png');
 
   /// File path: assets/images/fifth_image_intro_screen.png
   AssetGenImage get fifthImageIntroScreen =>
@@ -42,32 +98,32 @@ class $AssetsImagesGen {
   AssetGenImage get hadeethCardBg =>
       const AssetGenImage('assets/images/hadeeth_card_bg.png');
 
-  /// File path: assets/images/hadeeth_icon.svg
-  String get hadeethIcon => 'assets/images/hadeeth_icon.svg';
-
   /// File path: assets/images/head_of_sebha.png
   AssetGenImage get headOfSebha =>
       const AssetGenImage('assets/images/head_of_sebha.png');
 
-  /// File path: assets/images/quran_icon.svg
-  String get quranIcon => 'assets/images/quran_icon.svg';
+  /// File path: assets/images/morning_azkar.png
+  AssetGenImage get morningAzkar =>
+      const AssetGenImage('assets/images/morning_azkar.png');
 
-  /// File path: assets/images/quran_star.svg
-  String get quranStar => 'assets/images/quran_star.svg';
+  /// File path: assets/images/mosque_effect.png
+  AssetGenImage get mosqueEffect =>
+      const AssetGenImage('assets/images/mosque_effect.png');
 
   /// File path: assets/images/quran_tab_bg.png
   AssetGenImage get quranTabBg =>
       const AssetGenImage('assets/images/quran_tab_bg.png');
 
-  /// File path: assets/images/radio_icon.svg
-  String get radioIcon => 'assets/images/radio_icon.svg';
+  /// File path: assets/images/radio_tab_bg.png
+  AssetGenImage get radioTabBg =>
+      const AssetGenImage('assets/images/radio_tab_bg.png');
+
+  /// File path: assets/images/s_waves_2.svg
+  String get sWaves2 => 'assets/images/s_waves_2.svg';
 
   /// File path: assets/images/sebha_body.png
   AssetGenImage get sebhaBody =>
       const AssetGenImage('assets/images/sebha_body.png');
-
-  /// File path: assets/images/sebha_icon.svg
-  String get sebhaIcon => 'assets/images/sebha_icon.svg';
 
   /// File path: assets/images/sebha_tab_bg.png
   AssetGenImage get sebhaTabBg =>
@@ -77,43 +133,53 @@ class $AssetsImagesGen {
   AssetGenImage get secImageIntroScreen =>
       const AssetGenImage('assets/images/sec_image_intro_screen.png');
 
+  /// File path: assets/images/sound_waves.svg
+  String get soundWaves => 'assets/images/sound_waves.svg';
+
   /// File path: assets/images/splash_image.png
   AssetGenImage get splashImage =>
       const AssetGenImage('assets/images/splash_image.png');
+
+  /// File path: assets/images/sw.png
+  AssetGenImage get sw => const AssetGenImage('assets/images/sw.png');
 
   /// File path: assets/images/third_image_intro_screen.png
   AssetGenImage get thirdImageIntroScreen =>
       const AssetGenImage('assets/images/third_image_intro_screen.png');
 
-  /// File path: assets/images/time_icon.svg
-  String get timeIcon => 'assets/images/time_icon.svg';
+  /// File path: assets/images/time_tab_bg.png
+  AssetGenImage get timeTabBg =>
+      const AssetGenImage('assets/images/time_tab_bg.png');
 
   /// List of all assets
   List<dynamic> get values => [
     appBarImage,
     cardImage,
+    eveningAzkar,
     fifthImageIntroScreen,
     firstImageIntroScreen,
     fourthImageIntroScreen,
     hadeethBg,
     hadeethCardBg,
-    hadeethIcon,
     headOfSebha,
-    quranIcon,
-    quranStar,
+    morningAzkar,
+    mosqueEffect,
     quranTabBg,
-    radioIcon,
+    radioTabBg,
+    sWaves2,
     sebhaBody,
-    sebhaIcon,
     sebhaTabBg,
     secImageIntroScreen,
+    soundWaves,
     splashImage,
+    sw,
     thirdImageIntroScreen,
-    timeIcon,
+    timeTabBg,
   ];
 }
 
 abstract final class Assets {
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 

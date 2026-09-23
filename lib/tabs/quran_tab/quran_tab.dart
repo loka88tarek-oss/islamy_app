@@ -11,8 +11,8 @@ class QuranTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.sizeOf(context);
-
+  
+  Size size = MediaQuery.sizeOf(context);
     return Stack(
       fit: StackFit.expand,
       children: [
@@ -46,7 +46,7 @@ class QuranTab extends StatelessWidget {
                     prefixIcon: Padding(
                       padding: const EdgeInsets.all(14.0),
                       child: SvgPicture.asset(
-                        Assets.images.quranIcon,
+                        Assets.icons.quranIcon,
                         colorFilter: ColorFilter.mode(
                           AppColors.goldColor,
                           BlendMode.srcIn,

@@ -29,7 +29,7 @@ class SuraListView extends StatelessWidget {
                 leading: Stack(
                   alignment: Alignment.center,
                   children: [
-                    SvgPicture.asset(Assets.images.quranStar),
+                    SvgPicture.asset(Assets.icons.quranStar),
                     Text(
                       "${(index + 1)}",
                       style: TextStyle(
