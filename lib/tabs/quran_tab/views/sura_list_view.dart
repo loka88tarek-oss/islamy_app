@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:islamy_app/common/app_colors.dart';
 import 'package:islamy_app/gen/assets.gen.dart';
 import 'package:islamy_app/model/sura_model.dart';
+import 'package:islamy_app/tabs/quran_tab/views/sura_view.dart';
 
 class SuraListView extends StatelessWidget {
   const SuraListView({super.key});
@@ -24,7 +25,7 @@ class SuraListView extends StatelessWidget {
           SizedBox(height: 20),
           Expanded(
             child: ListView.separated(
-              itemBuilder: (context, index) => drawSuraTile(SuraModel.allSuras[index]),
+              itemBuilder: (context, index) => drawSuraTile(context,SuraModel.allSuras[index]),
               separatorBuilder: (context, index) => Divider(
                 color: AppColors.whiteColor,
                 endIndent: 44,
@@ -38,8 +39,11 @@ class SuraListView extends StatelessWidget {
     );
   }
 
-  Widget drawSuraTile(SuraModel suraModel) {
+  Widget drawSuraTile(BuildContext context,SuraModel suraModel) {
     return ListTile(
+      onTap: () {
+        Navigator.of(context).pushNamed(SuraView.suraRouteName,arguments: suraModel);
+      },
       minVerticalPadding: 0,
       contentPadding: EdgeInsets.all(0),
       leading: Stack(

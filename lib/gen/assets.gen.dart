@@ -140,6 +140,10 @@ class $AssetsImagesGen {
   AssetGenImage get splashImage =>
       const AssetGenImage('assets/images/splash_image.png');
 
+  /// File path: assets/images/sura_view_bg.png
+  AssetGenImage get suraViewBg =>
+      const AssetGenImage('assets/images/sura_view_bg.png');
+
   /// File path: assets/images/sw.png
   AssetGenImage get sw => const AssetGenImage('assets/images/sw.png');
 
@@ -172,6 +176,7 @@ class $AssetsImagesGen {
     secImageIntroScreen,
     soundWaves,
     splashImage,
+    suraViewBg,
     sw,
     thirdImageIntroScreen,
     timeTabBg,
