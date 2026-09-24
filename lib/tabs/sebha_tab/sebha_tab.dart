@@ -1,11 +1,31 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:islamy_app/common/app_colors.dart';
 import 'package:islamy_app/gen/assets.gen.dart';
 import 'package:islamy_app/widgets/bg_build_widget.dart';
 
-class SebhaTab extends StatelessWidget {
+class SebhaTab extends StatefulWidget {
   const SebhaTab({super.key});
 
+  @override
+  State<SebhaTab> createState() => _SebhaTabState();
+}
+
+class _SebhaTabState extends State<SebhaTab> {
+  int count = 0;
+  int indexOfList = 0;
+  bool isEndOfCount = false;
+   bool isClicked = false;
+  List<String> azkarList = [
+    "سُبْحَانَ اللَّهِ",
+    "الْحَمْدُ لِلَّهِ",
+    "لَا إِلَٰهَ إِلَّا اللَّهُ",
+    "اللَّهُ أَكْبَرُ",
+    "لَا حَوْلَ وَلَا قُوَّةَ\n     إِلَّا بِاللَّهِ",
+    "اللَّهُمَّ اغْفِرْ لِي",
+    "اللَّهُمَّ ارْحَمْنِي",
+  ];
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
@@ -41,21 +61,25 @@ class SebhaTab extends StatelessWidget {
                         child: Image.asset(
                           Assets.images.headOfSebha.path,
                           width: size.width * .2,
-                          height: size.height*.12,
+                          height: size.height * .12,
                         ),
                       ),
                     ),
-                    Image.asset(
-                      Assets.images.sebhaBody.path,
-                      width: size.width * 1.3,
-                      height: size.height * .4,
+                     
+                    Transform.rotate(
+                      angle: -math.pi / 4,
+                      child: Image.asset(
+                        Assets.images.sebhaBody.path,
+                        width: size.width * 1.3,
+                        height: size.height * .4,
+                      ),
                     ),
                     Center(
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            "سبحان الله",
+                            azkarList[indexOfList],
                             style: TextStyle(
                               color: AppColors.whiteColor,
                               fontSize: 36,
@@ -63,12 +87,21 @@ class SebhaTab extends StatelessWidget {
                             ),
                           ),
                           SizedBox(height: 10),
-                          Text(
-                            30.toString(),
-                            style: TextStyle(
-                              color: AppColors.whiteColor,
-                              fontSize: 36,
-                              fontWeight: .bold,
+                          InkWell(
+                            onTap: () {
+                              onTapCount();
+                             isClicked=false;
+                             setState(() {
+                               
+                             });
+                            },
+                            child: Text(
+                              count.toString(),
+                              style: TextStyle(
+                                color: AppColors.whiteColor,
+                                fontSize: 36,
+                                fontWeight: .bold,
+                              ),
                             ),
                           ),
                         ],
@@ -82,5 +115,24 @@ class SebhaTab extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  void onTapCount() {
+    isClicked=true;
+    if (count < 33) {
+      count++;
+    } else {
+      count = 0;
+      isEndOfCount = true;
+
+      if (indexOfList < azkarList.length - 1) {
+        indexOfList++;
+      } else if (indexOfList == azkarList.length - 1) {
+        indexOfList = 0;
+        count = 0;
+      }
+    }
+
+    setState(() {});
   }
 }
