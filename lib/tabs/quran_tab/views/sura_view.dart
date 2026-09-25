@@ -58,7 +58,7 @@ class _SuraViewState extends State<SuraView> {
                       text: 
                     TextSpan(
                       children: List.generate(ayat.length, (index)=>
-                      TextSpan(text: ayat[index]+'(${index+1})',
+                      TextSpan(text: '${ayat[index]}(${index+1})',
                       style: TextStyle(
                       color: AppColors.goldColor,
                       fontWeight: .bold,

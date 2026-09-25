@@ -6,43 +6,74 @@ import 'package:islamy_app/model/sura_model.dart';
 import 'package:islamy_app/tabs/quran_tab/views/sura_view.dart';
 
 class SuraListView extends StatelessWidget {
-  const SuraListView({super.key});
-
+  const SuraListView({super.key, required this.searchText, required this.mostRecent});
+  final String searchText;
+  final void Function(int) mostRecent;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "Suras List",
-            style: TextStyle(
-              color: AppColors.butterYellowTextFeild,
-              fontSize: 16,
-              fontWeight: .w700,
+    List<SuraModel> suras = SuraModel.allSuras;
+    suras = suras
+        .where(
+          (element) =>
+              element.suraNameAr.contains(searchText) ||
+              element.suraNameEn.contains(searchText),
+        )
+        .toList();
+    return suras.isNotEmpty
+        ? Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Suras List",
+                  style: TextStyle(
+                    color: AppColors.butterYellowTextFeild,
+                    fontSize: 16,
+                    fontWeight: .w700,
+                  ),
+                ),
+                SizedBox(height: 20),
+                Expanded(
+                  child: ListView.separated(
+                    itemBuilder: (context, index) =>
+                        drawSuraTile(context, suras[index],index),
+                    separatorBuilder: (context, index) => Divider(
+                      color: AppColors.whiteColor,
+                      endIndent: 44,
+                      indent: 44,
+                    ),
+                    itemCount: suras.length,
+                  ),
+                ),
+              ],
             ),
-          ),
-          SizedBox(height: 20),
-          Expanded(
-            child: ListView.separated(
-              itemBuilder: (context, index) => drawSuraTile(context,SuraModel.allSuras[index]),
-              separatorBuilder: (context, index) => Divider(
-                color: AppColors.whiteColor,
-                endIndent: 44,
-                indent: 44,
-              ),
-              itemCount: SuraModel.allSuras.length,
+          )
+        : Expanded(
+          child: Column(
+            mainAxisAlignment: .center,
+              children: [
+                Center(
+                  child: Text(
+                    "No suras found!!",
+                    style: TextStyle(
+                      color: AppColors.whiteColor,
+                      fontSize: 18,
+                      fontWeight: .w500,
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ),
-        ],
-      ),
-    );
+        );
   }
 
-  Widget drawSuraTile(BuildContext context,SuraModel suraModel) {
+  Widget drawSuraTile(BuildContext context, SuraModel suraModel,int index) {
     return ListTile(
       onTap: () {
-        Navigator.of(context).pushNamed(SuraView.suraRouteName,arguments: suraModel);
+        mostRecent(index);
+        Navigator.of(
+          context,
+        ).pushNamed(SuraView.suraRouteName, arguments: suraModel);
       },
       minVerticalPadding: 0,
       contentPadding: EdgeInsets.all(0),
