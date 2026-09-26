@@ -3,10 +3,12 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islamy_app/common/app_colors.dart';
+import 'package:islamy_app/data/caching_keys.dart';
 import 'package:islamy_app/gen/assets.gen.dart';
 import 'package:islamy_app/tabs/quran_tab/views/most_recent_view.dart';
 import 'package:islamy_app/tabs/quran_tab/views/sura_list_view.dart';
 import 'package:islamy_app/widgets/bg_build_widget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class QuranTab extends StatefulWidget {
   const QuranTab({super.key});
@@ -18,6 +20,13 @@ class QuranTab extends StatefulWidget {
 class _QuranTabState extends State<QuranTab> {
   String searchText = '';
   List<int> mostRecent = [];
+  late SharedPreferences prefs;
+  @override
+  void initState() {
+    
+    super.initState();
+    readMostRecent();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +44,7 @@ class _QuranTabState extends State<QuranTab> {
                 Center(child: Image.asset(Assets.images.appBarImage.path)),
                 SizedBox(height: 20),
                 TextField(
+                  
                   keyboardAppearance: Brightness.dark,
                   keyboardType: TextInputType.text,
 
@@ -43,12 +53,14 @@ class _QuranTabState extends State<QuranTab> {
                     setState(() {});
                   },
                   style: TextStyle(
+                    
                     fontFamily: 'jannalt',
                     color: AppColors.butterYellowTextFeild,
                     fontSize: 16,
                     fontWeight: .w700,
                   ),
                   decoration: InputDecoration(
+                    
                     filled: true,
                     fillColor: AppColors.blackColor.withValues(alpha: .7),
                     hint: Text(
@@ -105,8 +117,19 @@ class _QuranTabState extends State<QuranTab> {
       mostRecent.insert(0, index);
     } else {
       mostRecent.insert(0, index);
-
-      setState(() {});
+   
+      
     }
+     List<String> strIndex=mostRecent.map((e)=>e.toString()).toList();
+    prefs.setStringList(CachingKeys.mostRecent, strIndex);
+    setState(() {});
+  }
+  void readMostRecent()async{
+     prefs= await SharedPreferences.getInstance();
+    List<String> strIndex=prefs.getStringList(CachingKeys.mostRecent)??[];
+    mostRecent=strIndex.map((e)=>int.parse(e)).toList();
+    setState(() {
+      
+    });
   }
 }

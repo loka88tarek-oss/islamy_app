@@ -11,6 +11,214 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsHadeethGen {
+  const $AssetsHadeethGen();
+
+  /// File path: assets/hadeeth/h1 (1).txt
+  String get h11 => 'assets/hadeeth/h1 (1).txt';
+
+  /// File path: assets/hadeeth/h10 (1).txt
+  String get h101 => 'assets/hadeeth/h10 (1).txt';
+
+  /// File path: assets/hadeeth/h11 (1).txt
+  String get h111 => 'assets/hadeeth/h11 (1).txt';
+
+  /// File path: assets/hadeeth/h12 (1).txt
+  String get h121 => 'assets/hadeeth/h12 (1).txt';
+
+  /// File path: assets/hadeeth/h13 (1).txt
+  String get h131 => 'assets/hadeeth/h13 (1).txt';
+
+  /// File path: assets/hadeeth/h14 (1).txt
+  String get h141 => 'assets/hadeeth/h14 (1).txt';
+
+  /// File path: assets/hadeeth/h15 (1).txt
+  String get h151 => 'assets/hadeeth/h15 (1).txt';
+
+  /// File path: assets/hadeeth/h16 (1).txt
+  String get h161 => 'assets/hadeeth/h16 (1).txt';
+
+  /// File path: assets/hadeeth/h17 (1).txt
+  String get h171 => 'assets/hadeeth/h17 (1).txt';
+
+  /// File path: assets/hadeeth/h18 (1).txt
+  String get h181 => 'assets/hadeeth/h18 (1).txt';
+
+  /// File path: assets/hadeeth/h19 (1).txt
+  String get h191 => 'assets/hadeeth/h19 (1).txt';
+
+  /// File path: assets/hadeeth/h2 (1).txt
+  String get h21 => 'assets/hadeeth/h2 (1).txt';
+
+  /// File path: assets/hadeeth/h20 (1).txt
+  String get h201 => 'assets/hadeeth/h20 (1).txt';
+
+  /// File path: assets/hadeeth/h21 (1).txt
+  String get h211 => 'assets/hadeeth/h21 (1).txt';
+
+  /// File path: assets/hadeeth/h22 (1).txt
+  String get h221 => 'assets/hadeeth/h22 (1).txt';
+
+  /// File path: assets/hadeeth/h23 (1).txt
+  String get h231 => 'assets/hadeeth/h23 (1).txt';
+
+  /// File path: assets/hadeeth/h24 (1).txt
+  String get h241 => 'assets/hadeeth/h24 (1).txt';
+
+  /// File path: assets/hadeeth/h25 (1).txt
+  String get h251 => 'assets/hadeeth/h25 (1).txt';
+
+  /// File path: assets/hadeeth/h26 (1).txt
+  String get h261 => 'assets/hadeeth/h26 (1).txt';
+
+  /// File path: assets/hadeeth/h27 (1).txt
+  String get h271 => 'assets/hadeeth/h27 (1).txt';
+
+  /// File path: assets/hadeeth/h28 (1).txt
+  String get h281 => 'assets/hadeeth/h28 (1).txt';
+
+  /// File path: assets/hadeeth/h29 (1).txt
+  String get h291 => 'assets/hadeeth/h29 (1).txt';
+
+  /// File path: assets/hadeeth/h3 (1).txt
+  String get h31 => 'assets/hadeeth/h3 (1).txt';
+
+  /// File path: assets/hadeeth/h30 (1).txt
+  String get h301 => 'assets/hadeeth/h30 (1).txt';
+
+  /// File path: assets/hadeeth/h31 (1).txt
+  String get h311 => 'assets/hadeeth/h31 (1).txt';
+
+  /// File path: assets/hadeeth/h32 (1).txt
+  String get h321 => 'assets/hadeeth/h32 (1).txt';
+
+  /// File path: assets/hadeeth/h33 (1).txt
+  String get h331 => 'assets/hadeeth/h33 (1).txt';
+
+  /// File path: assets/hadeeth/h34 (1).txt
+  String get h341 => 'assets/hadeeth/h34 (1).txt';
+
+  /// File path: assets/hadeeth/h35 (1).txt
+  String get h351 => 'assets/hadeeth/h35 (1).txt';
+
+  /// File path: assets/hadeeth/h36 (1).txt
+  String get h361 => 'assets/hadeeth/h36 (1).txt';
+
+  /// File path: assets/hadeeth/h37 (1).txt
+  String get h371 => 'assets/hadeeth/h37 (1).txt';
+
+  /// File path: assets/hadeeth/h38 (1).txt
+  String get h381 => 'assets/hadeeth/h38 (1).txt';
+
+  /// File path: assets/hadeeth/h39 (1).txt
+  String get h391 => 'assets/hadeeth/h39 (1).txt';
+
+  /// File path: assets/hadeeth/h4 (1).txt
+  String get h41 => 'assets/hadeeth/h4 (1).txt';
+
+  /// File path: assets/hadeeth/h40 (1).txt
+  String get h401 => 'assets/hadeeth/h40 (1).txt';
+
+  /// File path: assets/hadeeth/h41 (1).txt
+  String get h411 => 'assets/hadeeth/h41 (1).txt';
+
+  /// File path: assets/hadeeth/h42 (1).txt
+  String get h421 => 'assets/hadeeth/h42 (1).txt';
+
+  /// File path: assets/hadeeth/h43 (1).txt
+  String get h431 => 'assets/hadeeth/h43 (1).txt';
+
+  /// File path: assets/hadeeth/h44 (1).txt
+  String get h441 => 'assets/hadeeth/h44 (1).txt';
+
+  /// File path: assets/hadeeth/h45 (1).txt
+  String get h451 => 'assets/hadeeth/h45 (1).txt';
+
+  /// File path: assets/hadeeth/h46 (1).txt
+  String get h461 => 'assets/hadeeth/h46 (1).txt';
+
+  /// File path: assets/hadeeth/h47 (1).txt
+  String get h471 => 'assets/hadeeth/h47 (1).txt';
+
+  /// File path: assets/hadeeth/h48 (1).txt
+  String get h481 => 'assets/hadeeth/h48 (1).txt';
+
+  /// File path: assets/hadeeth/h49 (1).txt
+  String get h491 => 'assets/hadeeth/h49 (1).txt';
+
+  /// File path: assets/hadeeth/h5 (1).txt
+  String get h51 => 'assets/hadeeth/h5 (1).txt';
+
+  /// File path: assets/hadeeth/h50 (1).txt
+  String get h501 => 'assets/hadeeth/h50 (1).txt';
+
+  /// File path: assets/hadeeth/h6 (1).txt
+  String get h61 => 'assets/hadeeth/h6 (1).txt';
+
+  /// File path: assets/hadeeth/h7 (1).txt
+  String get h71 => 'assets/hadeeth/h7 (1).txt';
+
+  /// File path: assets/hadeeth/h8 (1).txt
+  String get h81 => 'assets/hadeeth/h8 (1).txt';
+
+  /// File path: assets/hadeeth/h9 (1).txt
+  String get h91 => 'assets/hadeeth/h9 (1).txt';
+
+  /// List of all assets
+  List<String> get values => [
+    h11,
+    h101,
+    h111,
+    h121,
+    h131,
+    h141,
+    h151,
+    h161,
+    h171,
+    h181,
+    h191,
+    h21,
+    h201,
+    h211,
+    h221,
+    h231,
+    h241,
+    h251,
+    h261,
+    h271,
+    h281,
+    h291,
+    h31,
+    h301,
+    h311,
+    h321,
+    h331,
+    h341,
+    h351,
+    h361,
+    h371,
+    h381,
+    h391,
+    h41,
+    h401,
+    h411,
+    h421,
+    h431,
+    h441,
+    h451,
+    h461,
+    h471,
+    h481,
+    h491,
+    h51,
+    h501,
+    h61,
+    h71,
+    h81,
+    h91,
+  ];
+}
+
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
@@ -133,6 +341,10 @@ class $AssetsImagesGen {
   AssetGenImage get secImageIntroScreen =>
       const AssetGenImage('assets/images/sec_image_intro_screen.png');
 
+  /// File path: assets/images/sound_wave_1.png
+  AssetGenImage get soundWave1 =>
+      const AssetGenImage('assets/images/sound_wave_1.png');
+
   /// File path: assets/images/sound_waves.svg
   String get soundWaves => 'assets/images/sound_waves.svg';
 
@@ -174,6 +386,7 @@ class $AssetsImagesGen {
     sebhaBody,
     sebhaTabBg,
     secImageIntroScreen,
+    soundWave1,
     soundWaves,
     splashImage,
     suraViewBg,
@@ -648,6 +861,7 @@ class $AssetsSurasGen {
 }
 
 abstract final class Assets {
+  static const $AssetsHadeethGen hadeeth = $AssetsHadeethGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsSurasGen suras = $AssetsSurasGen();

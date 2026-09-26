@@ -70,7 +70,8 @@ class SuraListView extends StatelessWidget {
   Widget drawSuraTile(BuildContext context, SuraModel suraModel,int index) {
     return ListTile(
       onTap: () {
-        mostRecent(index);
+        int realIndex=SuraModel.allSuras.indexWhere((element) => element.id==suraModel.id,);
+        mostRecent(realIndex);
         Navigator.of(
           context,
         ).pushNamed(SuraView.suraRouteName, arguments: suraModel);

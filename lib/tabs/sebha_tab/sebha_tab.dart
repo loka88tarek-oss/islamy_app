@@ -15,6 +15,7 @@ class SebhaTab extends StatefulWidget {
 class _SebhaTabState extends State<SebhaTab> {
   int count = 0;
   int indexOfList = 0;
+  double turn=0;
   bool isEndOfCount = false;
    bool isClicked = false;
   List<String> azkarList = [
@@ -49,53 +50,57 @@ class _SebhaTabState extends State<SebhaTab> {
 
               Padding(
                 padding: const EdgeInsets.only(top: 90),
-                child: Stack(
-                  clipBehavior: Clip.none,
-                  alignment: Alignment.center,
-                  children: [
-                    Positioned(
-                      top: -88,
-                      left: 0,
-                      right: 0,
-                      child: Center(
-                        child: Image.asset(
-                          Assets.images.headOfSebha.path,
-                          width: size.width * .2,
-                          height: size.height * .12,
+                child: InkWell(
+                  onTap: () {
+                                onTapCount();
+                               isClicked=false;
+                                  
+                            setState(() {
+                              turn+=1/30;
+                            });
+                          
+                              },
+
+
+                  child: Stack(
+                    clipBehavior: Clip.none,
+                    alignment: Alignment.center,
+                    children: [
+                      Positioned(
+                        top: -84,
+                        left: 0,
+                        right: 0,
+                        child: Center(
+                          child: Image.asset(
+                            Assets.images.headOfSebha.path,
+                            width: size.width * .2,
+                            height: size.height * .12,
+                          ),
                         ),
                       ),
-                    ),
-                     
-                    Transform.rotate(
-                      angle: -math.pi / 4,
-                      child: Image.asset(
-                        Assets.images.sebhaBody.path,
-                        width: size.width * 1.3,
-                        height: size.height * .4,
+                       
+                      AnimatedRotation(
+                        turns: turn, duration: Duration(seconds: 1),
+                        child: Image.asset(
+                          Assets.images.sebhaBody.path,
+                          width: size.width * 1.3,
+                          height: size.height * .4,
+                        ),
                       ),
-                    ),
-                    Center(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            azkarList[indexOfList],
-                            style: TextStyle(
-                              color: AppColors.whiteColor,
-                              fontSize: 36,
-                              fontWeight: .bold,
+                      Center(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              azkarList[indexOfList],
+                              style: TextStyle(
+                                color: AppColors.whiteColor,
+                                fontSize: 36,
+                                fontWeight: .bold,
+                              ),
                             ),
-                          ),
-                          SizedBox(height: 10),
-                          InkWell(
-                            onTap: () {
-                              onTapCount();
-                             isClicked=false;
-                             setState(() {
-                               
-                             });
-                            },
-                            child: Text(
+                            SizedBox(height: 10),
+                            Text(
                               count.toString(),
                               style: TextStyle(
                                 color: AppColors.whiteColor,
@@ -103,11 +108,11 @@ class _SebhaTabState extends State<SebhaTab> {
                                 fontWeight: .bold,
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],
