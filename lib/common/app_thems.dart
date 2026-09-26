@@ -5,6 +5,7 @@ class AppThems {
   static ThemeData theme=ThemeData(
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.goldColor),
     fontFamily: 'jannalt',
+    fontFamilyFallback: ['jannalt'],
     scaffoldBackgroundColor: AppColors.blackColor,
     appBarTheme: const AppBarTheme(
       backgroundColor: AppColors.blackColor,

@@ -1,18 +1,36 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islamy_app/common/app_colors.dart';
+import 'package:islamy_app/data/caching_keys.dart';
 import 'package:islamy_app/gen/assets.gen.dart';
 import 'package:islamy_app/tabs/quran_tab/views/most_recent_view.dart';
 import 'package:islamy_app/tabs/quran_tab/views/sura_list_view.dart';
 import 'package:islamy_app/widgets/bg_build_widget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class QuranTab extends StatelessWidget {
+class QuranTab extends StatefulWidget {
   const QuranTab({super.key});
 
   @override
+  State<QuranTab> createState() => _QuranTabState();
+}
+
+class _QuranTabState extends State<QuranTab> {
+  String searchText = '';
+  List<int> mostRecent = [];
+  late SharedPreferences prefs;
+  @override
+  void initState() {
+    
+    super.initState();
+    readMostRecent();
+  }
+
+  @override
   Widget build(BuildContext context) {
-  
-  Size size = MediaQuery.sizeOf(context);
+    Size size = MediaQuery.sizeOf(context);
     return Stack(
       fit: StackFit.expand,
       children: [
@@ -26,12 +44,23 @@ class QuranTab extends StatelessWidget {
                 Center(child: Image.asset(Assets.images.appBarImage.path)),
                 SizedBox(height: 20),
                 TextField(
+                  
+                  keyboardAppearance: Brightness.dark,
+                  keyboardType: TextInputType.text,
+
+                  onChanged: (value) {
+                    searchText = value;
+                    setState(() {});
+                  },
                   style: TextStyle(
+                    
+                    fontFamily: 'jannalt',
                     color: AppColors.butterYellowTextFeild,
                     fontSize: 16,
                     fontWeight: .w700,
                   ),
                   decoration: InputDecoration(
+                    
                     filled: true,
                     fillColor: AppColors.blackColor.withValues(alpha: .7),
                     hint: Text(
@@ -68,15 +97,39 @@ class QuranTab extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                MostRecentView(size: size),
-                SizedBox(height: 20),
-              SuraListView(),
-             
+                if (mostRecent.isNotEmpty) ...[
+                  MostRecentView(size: size, mostRecentIndicies: mostRecent),
+                  SizedBox(height: 20),
+                ],
+
+                SuraListView(searchText: searchText, mostRecent: mostRecentFun),
               ],
             ),
           ),
         ),
       ],
     );
+  }
+
+  void mostRecentFun(int index) {
+    if (mostRecent.contains(index)) {
+      mostRecent.remove(index);
+      mostRecent.insert(0, index);
+    } else {
+      mostRecent.insert(0, index);
+   
+      
+    }
+     List<String> strIndex=mostRecent.map((e)=>e.toString()).toList();
+    prefs.setStringList(CachingKeys.mostRecent, strIndex);
+    setState(() {});
+  }
+  void readMostRecent()async{
+     prefs= await SharedPreferences.getInstance();
+    List<String> strIndex=prefs.getStringList(CachingKeys.mostRecent)??[];
+    mostRecent=strIndex.map((e)=>int.parse(e)).toList();
+    setState(() {
+      
+    });
   }
 }

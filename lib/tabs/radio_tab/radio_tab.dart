@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islamy_app/common/app_colors.dart';
@@ -32,10 +34,13 @@ class _RadioTabState extends State<RadioTab> {
                 children: [
                   Center(child: Image.asset(Assets.images.appBarImage.path)),
                   TabBar(
+            
                     dividerHeight: 0,
 
                     onTap: (value) {
                       isSelected = value;
+                     
+                      
                       setState(() {});
                     },
 
@@ -125,7 +130,12 @@ class _RadioTabState extends State<RadioTab> {
                     ],
                   ),
                   SizedBox(height: 10),
-                 ListViewSection(),
+                          
+                         ListViewSection(selectedTab: isSelected,)
+                     
+                       
+                      
+                 
                 ],
               ),
             ),
